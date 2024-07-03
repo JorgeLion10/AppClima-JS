@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(img/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.contenedor{
+  position: relative;
+  width: 400px;
+  height: 100px;
+  background: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 15px;
+  padding: 20px;
+  color: #fff;
+  transition: height .6s ease;
+}
+
+.busqueda-box{
+  position: relative;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+.busqueda-box i{
+  position: absolute;
+  left: 10px;
+  font-size: 28px;
+}
+
+.busqueda-box input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  outline: none;
+  border-radius: 10px;
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 48px 0 42px;
+}
+
+.busqueda-box input::placeholder{
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.busqueda-box button{
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 28px;
+  color: #fff;
+  padding: 0 40px 0 5px;
+  cursor: pointer;
+}
+
+.tiempo-box{
+  text-align: center;
+  margin: 40px 0;
+}
+
+.tiempo-box,
+.tiempo-detalles,
+.no-encontrado{
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.tiempo-box.active,
+.tiempo-detalles.active,
+.no-encontrado.active{
+  visibility: visible;
+}
+
+
+.tiempo-box .box,
+.no-encontrado .box{
+  transform: translateY(-100%);
+}
+
+
+.tiempo-box.active .box,
+.no-encontrado.active .box{
+  transform: translateY(0%);
+  transition: transform 1s ease;
+  transition-delay: .3s;
+}
+/*
+.tiempo-box .box .info-tiempo{
+  transform: translateY(-120%);
+}
+
+.contenedor.active .tiempo-box .box .info-tiempo,
+.contenedor.active .tiempo-detalles .humedad .info-humedad,
+.contenedor.active .tiempo-detalles .viento .info-viento{
+  transform: translateY(0%);
+  transition: transform 1s ease;
+}
+
+*/
+.tiempo-box img{
+  width: 60%;
+}
+
+.tiempo-box .temperatura{
+  position: relative;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 700;
+  margin: 20px 0 6px -30px;
+}
+
+
+.tiempo-box .temperatura span{
+  position: absolute;
+  font-size: 24px;
+  margin-left: 4px;
+}
+
+.tiempo-box .descripcion{
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
+
+}
+
+.tiempo-detalles{
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+}
+
+
+.tiempo-detalles .humedad,
+.tiempo-detalles .viento{
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+/*
+.tiempo-detalles.active .humedad,
+.tiempo-detalles.active .viento{
+  transform: translateY(0%);
+  transition: transform 1s ease;
+  transition-delay: 1s;
+}
+
+.tiempo-detalles .humedad .info-humedad,
+.tiempo-detalles .viento .info-viento{
+  transform: translateY(-100%);
+  overflow: hidden;
+}
+  */
+
+.tiempo-detalles .humedad{
+  padding-left: 15px;
+  justify-content: flex-start;
+}
+
+.tiempo-detalles .viento{
+  padding-left: 25px;
+  justify-content: flex-end;
+}
+
+
+.tiempo-detalles i{
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+.tiempo-detalles span{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.tiempo-detalles p{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.no-encontrado{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 110px;
+}
+
+.no-encontrado img{
+  width: 65%;
+}
+
+.no-encontrado p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+
+.esconder-ciudad{
+  display: none;
+} 
+

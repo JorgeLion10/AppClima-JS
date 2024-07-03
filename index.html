@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Aplicación del Clima</title>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="busqueda-box">
+      <i class="bx bxs-map"></i>
+      <input type="text" placeholder="Ingresa tu ubicación">
+      <button class="bx bx-search"></button>
+
+    </div>
+
+    <p class="esconder-ciudad">ciudad escondida</p>
+
+    <div class="tiempo-box">
+      <div class="box">
+        <div class="info-tiempo">
+          <div class="tiempo">
+            <img src="img/cloud.png">
+            <p class="temperatura">0<span>ºC</span></p>
+            <p class="descripcion">Broken Clouds</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tiempo-detalles">
+      <div class="humedad">
+        <i class="bx bx-water"></i>
+        <div class="text">
+          <div class="info-humedad">
+            <span>0%</span>
+          </div>
+          <p>Humedad</p>
+        </div>
+      </div>
+
+      <div class="viento">
+        <i class="bx bx-wind"></i>
+        <div class="text">
+          <div class="info-viento">
+            <span>0Km/h</span>
+          </div>
+          <p>Velocidad del Viento</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="no-encontrado">
+      <div class="box">
+        <img src="img/404.png">
+        <p>Oops! Ubicación no encontrada</p>
+
+      </div>
+
+    </div>
+
+
+  
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
